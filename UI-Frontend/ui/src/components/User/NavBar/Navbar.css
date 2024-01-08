@@ -1,7 +1,7 @@
 .Navbar{
     height: 10vh;
     width: 80%;
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     align-self: center;
     display: flex;
@@ -9,7 +9,6 @@
     align-items: center;
     justify-content: space-between;
     color: white;
-    /* background-color: rgba(0, 0, 0, 0.6); */
 }
 
 .Navbar-row{

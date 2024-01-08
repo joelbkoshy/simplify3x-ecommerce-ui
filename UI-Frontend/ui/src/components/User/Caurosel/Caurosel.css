@@ -1,0 +1,53 @@
+.caurosel-container {
+    display: flex;
+    flex-direction: row;
+    border-radius: 25px;
+    height: 20rem;
+    margin-top: 0.9rem;
+    margin-bottom: 0.5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    justify-content: center;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.carousel-images{
+    display: flex;
+    width: 100%;
+}
+
+.carousel-images img{
+    width: 100;
+}
+.caurosel-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* overflow: hidden; */
+    
+}
+.carousel-leftButton {
+    background-color: white;
+    border: none;
+    width: 40px;
+    height: 70px;
+    position: absolute;
+    left: 0; /* Adjust the left position as needed */
+    top: 50%; /* Align the button vertically in the middle */
+    transform: translateY(-50%); /* Center the button vertically */
+    cursor: pointer;
+}
+
+.carousel-rightButton {
+    background-color: white;
+    border: none;
+    width: 40px;
+    height: 70px;
+    position: absolute;
+    right: 0; /* Adjust the right position as needed */
+    top: 50%; /* Align the button vertically in the middle */
+    transform: translateY(-50%); /* Center the button vertically */
+    cursor: pointer;
+}
