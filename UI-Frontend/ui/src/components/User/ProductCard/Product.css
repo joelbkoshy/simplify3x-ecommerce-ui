@@ -1,0 +1,16 @@
+.ProductContainer {
+    display: flex;
+    flex-direction: column;
+     height: 290px; 
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    /* border-radius: 14px; */
+    /* border: 1px solid #b9b9b9; */
+    padding: 0;
+}
+
+.ProductContainer:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transform: scale3d(1.1,1.1,1.1);
+}
