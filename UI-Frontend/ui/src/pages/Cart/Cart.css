@@ -1,0 +1,44 @@
+.Cart-main-container {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #eeeff0;
+}
+
+.Cart-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.Cart-secondMain-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100rem;
+    gap:1rem;
+}
+
+
+.Cart-secondMain-firstContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: aliceblue;
+    width: 65%;
+    height: 100%;
+}
+
+.Cart-secondMain-secondContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 35%;
+    height: 100%;
+    background-color: rgb(35, 73, 107);
+
+}

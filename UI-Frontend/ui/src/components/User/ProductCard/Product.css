@@ -1,7 +1,7 @@
 .ProductContainer {
     display: flex;
     flex-direction: column;
-     height: 290px; 
+    height: 400px;
     background-color: white;
     align-items: center;
     justify-content: center;
@@ -10,7 +10,52 @@
     padding: 0;
 }
 
-.ProductContainer:hover{
+.ProductImage {
+    background-color: rgb(185, 185, 185);
+    display: flex;
+    margin: 25px;
+    width: 80%;
+    height: 60%;
+}
+
+.ProductContainer:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    transform: scale3d(1.1,1.1,1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.ProductBuyNow {
+    display: flex;
+    justify-content: flex-start;
+    width: 80%;
+    padding-left: 0;
+    overflow: hidden;
+    /* height: ; */
+}
+
+.ProductBuyNow button {
+    padding: 15px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+    border: none;
+    float: left;
+    background: #ff9f00;
+    color: var(--color-white-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 2rem;
+}
+
+.ProductBuyNow button span{
+ margin-left: 2px;
+ font-size: 12px;
+ font-weight: bold;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.ProductBuyNow button:hover {
+    background: #eb9100;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    cursor: pointer;
+
 }

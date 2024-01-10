@@ -42,7 +42,8 @@
     width: 90vw;
     /* margin-left:3.2rem ; */
     display: grid;
-    grid-template-columns: auto auto auto ;
+    /* grid-template-columns: auto auto auto ; */
+    grid-template-columns: repeat(4, 1fr);
     padding-top: 0px;
     padding-left: 10px;
     padding-right: 10px;
@@ -62,5 +63,5 @@
 
 
 .User-product-grid-item{
-    /* padding: 5px; */
+    padding: 5px;
 }

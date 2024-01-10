@@ -1,34 +1,34 @@
-import React from 'react'
-import Avatar from '../../../assets/avatar.png'
 import { Button } from '@mui/material'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import './Navbar.css'
+import { useNavigate } from 'react-router';
 
 
 const Navbar = () => {
-    return (
-        <div className='Navbar' style={{ color: 'black' }}>
 
-            {/* First Part */}
+    const navigate = useNavigate();
+    return (
+        <div className='Navbar' style={{ color: 'black' }} >
+
             <div className='Navbar-row'>
-                <div className='Navbar-logo' style={{ color: 'black' }}>
+                <div className='Navbar-logo' style={{ color: 'black' }} onClick={()=>{
+                    console.log("The current url : ",window.location.href)
+                    navigate("/main")}}>
                     Jam<span style={{ color: '#04856b' }}>Here</span>
                     &nbsp;
                 </div>
                 |
                 <div className='Navbar-linkscontainer'>
-                    {/* <a style={{ color: 'black' }} onClick={accountclick}>Account</a> */}
                     <a style={{ color: 'black' }} >History</a>
                     <a style={{ color: 'black' }} >Feedback</a>
                 </div>
             </div>
 
-            {/* Second Part */}
             <div className='Navbar-row'>
-                {/* <Link to="/register">
-        <Button variant='text' style={{textTransform:'none', borderRadius: '100px', color: 'black'}}>Sign Up</Button>
-      </Link> */}
-                <p style={{ margin: 0 }}>Welcome, User</p>
-                <img src={Avatar} height='60px'></img>
+                <Button variant="text" startIcon={<ShoppingCartIcon />}
+                    style={{ margin: '10px', color: 'black', textTransform: 'none' }}   onClick={()=>navigate("/cart")}>
+                    Cart
+                </Button>
                 <Button variant='contained'
                     style={{
                         textTransform: 'none', width: '90px',
