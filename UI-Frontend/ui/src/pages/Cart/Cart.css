@@ -1,7 +1,12 @@
 .Cart-main-container {
-    min-height: 100vh;
+    min-height: 120vh;
     width: 100%;
     background-color: #eeeff0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: max-content;
 }
 
 .Cart-column {
@@ -14,11 +19,13 @@
 .Cart-secondMain-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 80%;
-    height: 100rem;
-    gap:1rem;
+    height: max-content;
+    gap: 1rem;
+    margin-top: 1.5rem;
+
 }
 
 
@@ -27,9 +34,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background-color: aliceblue;
     width: 65%;
     height: 100%;
+    overflow: hidden;
 }
 
 .Cart-secondMain-secondContainer {
@@ -38,7 +45,92 @@
     align-items: center;
     justify-content: flex-start;
     width: 35%;
-    height: 100%;
-    background-color: rgb(35, 73, 107);
+    height: max-content;
+    background-color: white;
+    overflow: hidden;
 
+
+}
+
+.CartPriceDetails {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 10%;
+    /* background-color: antiquewhite; */
+    align-items: flex-start;
+    padding-left: 2.5rem;
+    border-bottom: 1px solid #eeeff0;
+    font-size: 1.07rem;
+    font-weight: 600;
+}
+
+.CartPriceDetailsMore {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 10%;
+    /* background-color: antiquewhite; */
+    align-items: flex-start;
+    padding-left: 2.5rem;
+
+}
+
+.CartPriceTotalDetails {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.07rem;
+    font-weight: 400;
+}
+
+.CartPriceTotalDetailsFinal {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.07rem;
+    font-weight: 400;
+    border-bottom: dashed #eeeff0;
+
+}
+
+.CartPriceTotalDetailsFinalLast {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.07rem;
+    font-weight: 400;
+}
+
+
+.Cart-PlaceOrderContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    height: 4rem;
+    padding: 0.25rem;
+    padding-right: 2rem;
+    box-shadow: 0 1px 2px 0 rgba(4, 4, 4, .2);
+    border-bottom: 1px solid #eeeff0;
+    background-color: white;
+}
+
+.Cart-PlaceOrderContainer button {
+    margin: 0.5rem;
+    background: #fb641b;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+    border: none;
+    color: #fff;
+    width: 15rem;
+    font-size: 15px;
+    font-weight: 550;
+    font-family: Roboto, Arial, sans-serif;
+    cursor: pointer;
 }

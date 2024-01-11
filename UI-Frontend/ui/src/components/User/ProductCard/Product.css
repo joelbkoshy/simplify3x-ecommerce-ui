@@ -8,6 +8,7 @@
     /* border-radius: 14px; */
     /* border: 1px solid #b9b9b9; */
     padding: 0;
+    overflow: hidden;
 }
 
 .ProductImage {
@@ -16,6 +17,13 @@
     margin: 25px;
     width: 80%;
     height: 60%;
+}
+
+.ProductImage img{
+    width: 80%;
+    height: 80%;
+    object-fit: fill;
+    padding: 1rem;
 }
 
 .ProductContainer:hover {

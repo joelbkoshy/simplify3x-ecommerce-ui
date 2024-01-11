@@ -2,11 +2,13 @@ import React from 'react'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 import './Product.css'
-const Product = () => {
+const Product = ({product}:any) => {
+
+  console.log("The product card : ",product)
   return (
     <div className='ProductContainer'>
-      <div className="ProductImage">
-
+      <div className="c">
+            <img src={product?.pimages} alt="" />
       </div>
       <div className="ProductBuyNow">
         <button>

@@ -64,4 +64,5 @@
 
 .User-product-grid-item{
     padding: 5px;
+    overflow: hidden;
 }
