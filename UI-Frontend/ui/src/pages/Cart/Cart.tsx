@@ -4,8 +4,42 @@ import './Cart.css'
 import CartCard from '../../components/User/CartCard/CartCard'
 import axios from 'axios'
 import Product from '../../components/User/ProductCard/Product'
+import RenderRazorpay from '../../components/User/Razorpay/RenderRazorpay'
+
+type Order = {
+  orderId : string,
+  currency : string,
+  amount  : number
+}
 
 const Cart = () => {
+
+
+  const [displayRazorpay, setDisplayRazorpay] = useState<boolean>(false);
+  const [orderDetails, setOrderDetails] = useState<Order>({
+    orderId: "",
+    currency: "",
+    amount: 0,
+  });
+
+  const handleCreateOrder = async () => {
+    const cid: number = 1
+    const response = await axios.get(`http://localhost:8080/user/placeorder?cid=${cid}`)
+    const orderId: string = response.data.order_id
+    console.log("The order_id : ", orderId)
+
+
+    if (response?.data && orderId) {
+      setOrderDetails({
+        orderId,
+        currency: "INR",
+        amount: totalAmount,
+      });
+      setDisplayRazorpay(true);
+    };
+
+
+  }
 
   const [products, setProducts] = useState<any[]>([])
   const [totalAmount, setTotalAmount] = useState<number>(0)
@@ -36,8 +70,17 @@ const Cart = () => {
             </>)
           }
           <div className='Cart-PlaceOrderContainer'>
-            <button>PLACE ORDER</button>
+            <button onClick={handleCreateOrder}>PLACE ORDER</button>
           </div>
+          {displayRazorpay && (
+            <RenderRazorpay
+              amount={totalAmount}
+              currency={"INR"}
+              orderId={orderDetails.orderId}
+              keyId={"rzp_test_SMuMe11eNRBTkt"}
+              keySecret={"ldbW0oVHlGWZ3eEXiX5xhd5J"}
+            />)
+          }
         </div>
         <div className="Cart-secondMain-secondContainer">
           <div className="CartPriceDetails">
@@ -56,12 +99,12 @@ const Cart = () => {
               <p>Delivery Charges</p>
               <p style={{ color: '#6ead71' }}>Free</p>
             </div>
-            <div className="CartPriceTotalDetailsFinal" style={{fontSize:'18px',fontWeight:'600'}}>
+            <div className="CartPriceTotalDetailsFinal" style={{ fontSize: '18px', fontWeight: '600' }}>
               <p>Total Amount</p>
               <p >&#8377;{totalAmount}</p>
             </div>
             <div className="CartPriceTotalDetailsFinalLast">
-              <p className='para' style={{color:'green',fontSize:'18px',fontWeight:'600',borderBottom:'none'}}>You will save ₹0 on this order</p>
+              <p className='para' style={{ color: 'green', fontSize: '18px', fontWeight: '600', borderBottom: 'none' }}>You will save ₹0 on this order</p>
             </div>
           </div>
         </div>

@@ -7,9 +7,11 @@ const Product = ({product}:any) => {
   console.log("The product card : ",product)
   return (
     <div className='ProductContainer'>
-      <div className="c">
+      <div className="ProductImage">
             <img src={product?.pimages} alt="" />
       </div>
+          {/* <p>{product?.pname}</p>
+          <p>&#8377;{product?.pcost}</p> */}
       <div className="ProductBuyNow">
         <button>
           {/* <div className="buttonItems"> */}
