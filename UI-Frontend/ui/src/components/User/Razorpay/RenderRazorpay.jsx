@@ -74,8 +74,6 @@ const RenderRazorpay = ({
 
 const options = {
     key: keyId, 
-    // amount:100000, 
-    // currency, 
     name: 'JamHere', 
     description: "Payment Checkout",
     image: "https://png.pngtree.com/png-clipart/20220719/original/pngtree-music-note-logo-png-image_8361975.png",
@@ -87,10 +85,8 @@ const options = {
       console.log(response);
       paymentId.current = response.razorpay_payment_id;
 
-      // Most important step to capture and authorize the payment. This can be done of Backend server.
       const succeeded = crypto.HmacSHA256(`${orderId}|${response.razorpay_payment_id}`, keySecret).toString() === response.razorpay_signature;
 
-      // If successfully authorized. Then we can consider the payment as successful.
       if (succeeded) {
         handlePayment(true, {
           orderId,
